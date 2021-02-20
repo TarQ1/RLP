@@ -7,8 +7,7 @@ client.commands = new Discord.Collection();
 
 // Getting the statu class and initializing an instance
 const Status = require("./src/class/class.js");
-var status = new Status();
-console.log(status.status);
+global.status =  new Status();
 
 const commandFolders = fs.readdirSync('./commands');
 
@@ -90,7 +89,7 @@ client.on("message", (message) => {
   setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
   try {
-    command.execute(message, args, status);
+    command.execute(message, args);
   } catch (error) {
     console.error(error);
     message.reply("there was an error trying to execute that command!");
