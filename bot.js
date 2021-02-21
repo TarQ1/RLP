@@ -32,7 +32,6 @@ const cooldowns = new Discord.Collection();
 
 client.once("ready", () => {
     console.log("Ready!");
-
 });
 
 client.on("message", (message) => {

@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["commands"],
     usage: "[command name]",
     cooldown: 10,
-    execute(message, args) {
+    async execute(message, args) {
         if (!status) {
             console.log("Can't access status");
             return;
