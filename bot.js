@@ -13,6 +13,8 @@ const Player = require("./src/class/char.js");
 global.player = new Player();
 
 
+
+
 const commandFolders = fs.readdirSync("./commands");
 
 for (const folder of commandFolders) {
@@ -30,7 +32,7 @@ const cooldowns = new Discord.Collection();
 
 client.once("ready", () => {
     console.log("Ready!");
-    
+
 });
 
 client.on("message", (message) => {

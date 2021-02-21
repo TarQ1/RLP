@@ -44,4 +44,5 @@ const Player = class {
     }
 };
 
+
 module.exports = Player;
