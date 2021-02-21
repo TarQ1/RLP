@@ -1,4 +1,3 @@
-const fs = require("fs");
 const { prefix } = require("../../config.json");
 
 module.exports = {
@@ -7,7 +6,7 @@ module.exports = {
   aliases: ["commands"],
   usage: "[command name]",
   cooldown: 10,
-  execute(message, args, status) {
+  execute(message, args) {
     if (!status) {
       console.log("Can't access status");
       return;

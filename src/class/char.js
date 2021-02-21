@@ -44,8 +44,4 @@ const Player = class {
     }
 };
 
-player = new Player();
-console.log(player);
-player.removehealh(10);
-player.save();
 module.exports = Player;
